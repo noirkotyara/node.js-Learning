@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document </title>
+    <link rel="stylesheet" href='/public/css/style.css'>
+</head>
+<body>
+    <header> <%- include('header.ejs')%> </header>
+    <div>Document of ID - <%= id %></div>
+    <div>Your age is <%= info.age %> </div>
+    <ul><% massive.forEach((number)=> {  %>
+        <li>there is a <%= number %></li>
+        <% });%></ul>
+        
+        <form action="/dataform" method="POST">
+          <p>Моя первая форма:<br>
+            Имя: <input type="text" name="firstname" value=""><br>
+            Фамилия:  <input type="text" name="lastname" value=""><br>
+            <input type="submit">
+          </p>
+        </form>
+</body>
+</html>
